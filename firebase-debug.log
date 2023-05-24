@@ -1,0 +1,87 @@
+[debug] [2023-05-24T10:14:06.842Z] ----------------------------------------------------------------------
+[debug] [2023-05-24T10:14:06.847Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-24T10:14:06.848Z] CLI Version:   12.2.0
+[debug] [2023-05-24T10:14:06.848Z] Platform:      win32
+[debug] [2023-05-24T10:14:06.848Z] Node Version:  v20.2.0
+[debug] [2023-05-24T10:14:06.848Z] Time:          Wed May 24 2023 15:44:06 GMT+0530 (India Standard Time)
+[debug] [2023-05-24T10:14:06.849Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-24T10:14:06.986Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-24T10:14:06.987Z] > authorizing via signed-in user (bamalekh@gmail.com)
+[debug] [2023-05-24T10:14:06.987Z] [iam] checking project oliveaira-e465c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-24T10:14:06.991Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions [none]
+[debug] [2023-05-24T10:14:06.991Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions x-goog-quota-user=projects/oliveaira-e465c
+[debug] [2023-05-24T10:14:06.992Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T10:14:08.501Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions 200
+[debug] [2023-05-24T10:14:08.502Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T10:14:08.505Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c [none]
+[debug] [2023-05-24T10:14:09.088Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c 200
+[debug] [2023-05-24T10:14:09.088Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c {"projectId":"oliveaira-e465c","projectNumber":"648740277391","displayName":"Oliveaira","name":"projects/oliveaira-e465c","resources":{"hostingSite":"oliveaira-e465c"},"state":"ACTIVE","etag":"1_bff3265d-2571-4db5-aca5-8b033486ff60"}
+[info] 
+[info] === Deploying to 'oliveaira-e465c'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-24T10:14:09.109Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions [none]
+[debug] [2023-05-24T10:14:09.110Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-24T10:14:10.460Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions 200
+[debug] [2023-05-24T10:14:10.461Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions {"name":"projects/648740277391/sites/oliveaira-e465c/versions/3b19dab83b2b0f56","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[oliveaira-e465c]: beginning deploy... 
+[debug] [2023-05-24T10:14:13.946Z] Error: EPERM: operation not permitted, scandir 'C:/Users/AmalekhBiju/AppData/Local/Application Data'
+    at Object.readdirSync (node:fs:1532:3)
+    at GlobSync._readdir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at GlobSync._processGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:383:10)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-24T10:14:22.808Z] ----------------------------------------------------------------------
+[debug] [2023-05-24T10:14:22.813Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-24T10:14:22.813Z] CLI Version:   12.2.0
+[debug] [2023-05-24T10:14:22.814Z] Platform:      win32
+[debug] [2023-05-24T10:14:22.814Z] Node Version:  v20.2.0
+[debug] [2023-05-24T10:14:22.814Z] Time:          Wed May 24 2023 15:44:22 GMT+0530 (India Standard Time)
+[debug] [2023-05-24T10:14:22.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-24T10:14:22.950Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-24T10:14:22.951Z] > authorizing via signed-in user (bamalekh@gmail.com)
+[debug] [2023-05-24T10:14:22.951Z] [iam] checking project oliveaira-e465c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-24T10:14:22.954Z] > refreshing access token with scopes: []
+[debug] [2023-05-24T10:14:22.957Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-24T10:14:22.957Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-24T10:14:23.288Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-24T10:14:23.289Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-24T10:14:23.438Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions [none]
+[debug] [2023-05-24T10:14:23.439Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions x-goog-quota-user=projects/oliveaira-e465c
+[debug] [2023-05-24T10:14:23.440Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T10:14:24.755Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions 200
+[debug] [2023-05-24T10:14:24.755Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oliveaira-e465c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T10:14:24.756Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c [none]
+[debug] [2023-05-24T10:14:25.349Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c 200
+[debug] [2023-05-24T10:14:25.349Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oliveaira-e465c {"projectId":"oliveaira-e465c","projectNumber":"648740277391","displayName":"Oliveaira","name":"projects/oliveaira-e465c","resources":{"hostingSite":"oliveaira-e465c"},"state":"ACTIVE","etag":"1_bff3265d-2571-4db5-aca5-8b033486ff60"}
+[info] 
+[info] === Deploying to 'oliveaira-e465c'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-24T10:14:25.388Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions [none]
+[debug] [2023-05-24T10:14:25.390Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-24T10:14:26.504Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions 200
+[debug] [2023-05-24T10:14:26.505Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/oliveaira-e465c/versions {"name":"projects/648740277391/sites/oliveaira-e465c/versions/2e2c53eae96da89c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[oliveaira-e465c]: beginning deploy... 
+[debug] [2023-05-24T10:14:27.503Z] Error: EPERM: operation not permitted, scandir 'C:/Users/AmalekhBiju/AppData/Local/Application Data'
+    at Object.readdirSync (node:fs:1532:3)
+    at GlobSync._readdir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at GlobSync._processGlobStar (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:383:10)
+    at GlobSync._process (C:\Users\AmalekhBiju\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+[error] 
+[error] Error: An unexpected error has occurred.
